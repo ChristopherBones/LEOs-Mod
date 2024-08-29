@@ -7,7 +7,7 @@ function main()
     while true do
         wait(0)
 
-        if not sampIsChatInputActive() and not sampIsDialogActive() then
+        if not (sampIsChatInputActive() or sampIsDialogActive() or isSampfuncsConsoleActive()) then
             if wasKeyPressed(vkeys.VK_1) then
                 sampSendChat("/tazer")
             elseif wasKeyPressed(vkeys.VK_2) then
